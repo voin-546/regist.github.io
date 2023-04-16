@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    transition: .3s ease-in all;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    width: 100%;
+    background-color: #fff;
+}
+body.dark {
+    background: #1A202C;
+}
+h1.dark, .container .text p.dark, .join p.dark, .container .text label.dark {
+    color: #fff;
+}
+.container input.dark {
+    background: #778ca3;
+}
+.appearance {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    padding-left: 25px;
+  }
+  .appearance svg path {
+    transform-origin: center;
+    transition: all 0.6s ease;
+    transform: translate3d(0, 0);
+    backface-visibility: hidden;
+  }
+  .appearance svg path.sun {
+    stroke: white;
+    transform: scale(0.4) rotate(60deg);
+    opacity: 0;
+  }
+  .appearance svg path.moon {
+    stroke: black;
+    opacity: 1;
+  }
+  .appearance.switch svg path.sun {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  .appearance.switch svg path.moon {
+    transform: scale(0.4) rotate(-60deg);
+    opacity: 0;
+  }
+.container {
+    width: inherit;
+    height: 100vh;
+    display: flex;
+}
+.theme {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+i#icon {
+cursor: pointer;
+transition: .3s ease-in all;
+}
+.container .img, .container .text {
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+.container .text {
+    overflow: visible;
+}
+.container .img img {
+    width: 100%;
+    height: 100vh;
+}
+.container .text {
+    display: flex;
+    align-items: center;
+}
+.container .text .regist {
+    width: 60%;
+    margin: auto;
+    line-height: 40px;
+}
+.container input {
+    border: none;
+border-radius: 5px;
+background-color: #fff;
+outline-color: #04C45C;
+width: 95%;
+height: 50px;
+padding-left: 20px;
+}
+input::placeholder {
+    font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+color: #2D3748;
+transition: .3s ease-in all;
+}
+.container .text p, .join p, .container .text label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;    
+    color: #2D3748;
+}
+h1 {
+    font-weight: 700;
+font-size: 30px;
+line-height: 35px;
+color: #2D3748;
+}
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    align-items: center;
+}
+.loaded {
+    visibility: hidden;
+    opacity: 0;
+}
+.remember {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.remember .col1 {
+    width: 30%;
+    justify-content: space-between;
+    display: flex;
+}
+input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.remember .col2 a, .join a {
+    font-weight: 400;
+font-size: 17px;
+line-height: 16px;
+color: #2C5282;
+}
+button {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    margin-top: 15px;
+    cursor: pointer;
+}
+button a {
+margin: auto;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+color: #fff;
+}
+.green {
+    background-color: #04C45C;
+}
+.black {
+    background-color: #2D3748;
+    display: flex;
+}
+.black a {
+    display: flex;
+    align-items: center;
+}
+.join {
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .container .text, .container .img {
+        width: 100%;
+        overflow: visible;
+    }
+    .container .img img {
+        height: 50vh;
+    }
+    .container .text {
+        padding-top: 20px;
+    }
+    .container .text .regist {
+        width: 90%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width: 441px) {
+    .container .text .regist .remember .col1 {
+       display: flex;
+       width: 40%;
+    }
+}
+@media (max-width: 331px) {
+    .remember .col1 {
+    flex-direction: column;
+    }
+    }
+    @media (min-width: 769px) and (max-width: 991px) {
+         .remember .col1 {
+            display: flex;
+            width: 45%;
+        }
+    }
+    @media (min-width: 992px) {
+         .remember .col1 {
+            width: 30%;
+        } 
+    }
